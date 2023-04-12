@@ -1,23 +1,28 @@
 import { useState } from "react"
 import "./App.css"
+import Accordion from "./components/Accordion"
 
 function App() {
+	// var acc = document.getElementsByClassName("accordion")
+	// var i
+
+	// for (i = 0; i < acc.length; i++) {
+	// 	acc[i].addEventListener("click", (e) => {
+	// 		/* Toggle between adding and removing the "active" class,
+	//   to highlight the button that controls the panel */
+	// 		this.classList.toggle("active")
+
+	// 		/* Toggle between hiding and showing the active panel */
+	// 		var panel = this.nextElementSibling
+	// 		if (panel.style.display === "block") {
+	// 			panel.style.display = "none"
+	// 		} else {
+	// 			panel.style.display = "block"
+	// 		}
+	// 	})
 	return (
 		<div className='App'>
-			<button className='accordion'>Section 1</button>
-			<div className='panel'>
-				<p>Lorem ipsum...</p>
-			</div>
-
-			<button className='accordion'>Section 2</button>
-			<div className='panel'>
-				<p>Lorem ipsum...</p>
-			</div>
-
-			<button className='accordion'>Section 3</button>
-			<div className='panel'>
-				<p>Lorem ipsum...</p>
-			</div>
+			<Accordion />
 		</div>
 	)
 }
