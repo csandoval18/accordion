@@ -1,24 +1,37 @@
+:root {
+	--main: rgb(167, 193, 228);
+}
+
+.accordion-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
 .btn-accordion {
-	background-color: #eee;
+	background-color: #fff;
+	border: none;
+	box-shadow: inset 0px -0.5px 2px 0.3px rgba(0, 0, 0, 0.24);
 	color: black;
 	cursor: pointer;
-	padding: 18px;
-	width: 100%;
+	padding: 20px;
 	text-align: left;
-	border: none;
 	outline: none;
 	transition: 0.4s;
+	width: 100%;
 }
 
 .active,
 .btn-accordion:hover {
-	background-color: #ccc;
+	background-color: var(--main);
 }
 
 .accordion-panel {
-	padding: 0 18px;
-	background-color: white;
-	height: 0;
+	background-color: #fff;
+	padding: 0 20px;
+	height: 0px;
 	overflow: hidden;
-	transition: height 0.8s ease-in-out;
+	transition: height 0.3s ease-in-out;
+}
+.accordion-panel.active {
+	height: 250px;
 }
