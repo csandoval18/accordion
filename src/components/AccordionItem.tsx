@@ -12,17 +12,14 @@ const AccordionItem: React.FC<AccordionItemProps> = (
 	return (
 		<div className='accordion-item'>
 			<button
-				className={active ? "accordion active" : "accordion"}
+				className={active ? "btn-accordion" : "btn-accordion"}
 				onClick={() => {
 					setActive(!active)
 				}}
 			>
 				{accordionProps.title}
 			</button>
-			<div
-				className='panel'
-				style={active ? { height: "fit-content" } : { maxHeight: "0" }}
-			>
+			<div className='accordion-panel'>
 				<p>{accordionProps.bodyContent}</p>
 			</div>
 		</div>
