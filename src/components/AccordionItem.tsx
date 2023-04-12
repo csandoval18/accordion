@@ -21,7 +21,7 @@ const AccordionItem: React.FC<AccordionItemProps> = (
 			</button>
 			<div
 				className='panel'
-				style={active ? { display: "block" } : { display: "none" }}
+				style={active ? { height: "fit-content" } : { maxHeight: "0" }}
 			>
 				<p>{accordionProps.bodyContent}</p>
 			</div>
