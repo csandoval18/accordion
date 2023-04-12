@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai"
 
 interface AccordionItemProps {
 	title?: string
@@ -18,6 +19,9 @@ const AccordionItem: React.FC<AccordionItemProps> = (
 				}}
 			>
 				{accordionProps.title}
+				<span className='icon'>
+					{active ? <AiOutlineClose /> : <AiOutlinePlus />}
+				</span>
 			</button>
 			<div className={active ? "accordion-panel active" : "accordion-panel"}>
 				<p>{accordionProps.bodyContent}</p>
