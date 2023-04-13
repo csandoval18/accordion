@@ -10,7 +10,7 @@
 .btn-accordion {
 	background-color: #fff;
 	border: none;
-	box-shadow: inset 0px -0.5px 2px 0.3px rgba(0, 0, 0, 0.24);
+	box-shadow: inset 0px -0.2px 0px 0.1px rgba(0, 0, 0, 0.24);
 	color: black;
 	cursor: pointer;
 	padding: 20px;
