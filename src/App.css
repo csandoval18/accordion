@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
 :root {
 	--main: rgb(167, 193, 228);
+}
+* {
+	font-family: "Poppins";
+	font-weight: 400;
 }
 
 .accordion-wrapper {
@@ -11,8 +17,11 @@
 	background-color: #fff;
 	border: none;
 	box-shadow: inset 0px -0.5px 2px 0.3px rgba(0, 0, 0, 0.24);
-	color: black;
+	color: rgb(20, 20, 20);
 	cursor: pointer;
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
 	padding: 20px;
 	text-align: left;
 	outline: none;

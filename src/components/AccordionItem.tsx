@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { AiOutlineClose, AiOutlinePlus } from "react-icons/ai"
 
 interface AccordionItemProps {
@@ -10,10 +10,11 @@ const AccordionItem: React.FC<AccordionItemProps> = (
 	accordionProps: AccordionItemProps,
 ) => {
 	const [active, setActive] = useState<true | false>(false)
+	const contentEl = useRef()
 	return (
 		<div className='accordion-item'>
 			<button
-				className={active ? "btn-accordion active" : "btn-accordion"}
+				className={`btn-accordion ${active ? "active" : ""}`}
 				onClick={() => {
 					setActive(!active)
 				}}
@@ -23,7 +24,10 @@ const AccordionItem: React.FC<AccordionItemProps> = (
 					{active ? <AiOutlineClose /> : <AiOutlinePlus />}
 				</span>
 			</button>
-			<div className={active ? "accordion-panel active" : "accordion-panel"}>
+			<div
+				className={`accordion-panel ${active ? "active" : ""}`}
+				ref={contentEl}
+			>
 				<p>{accordionProps.bodyContent}</p>
 			</div>
 		</div>
