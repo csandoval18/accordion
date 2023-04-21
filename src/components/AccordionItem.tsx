@@ -10,7 +10,7 @@ const AccordionItem: React.FC<AccordionItemProps> = (
 	accordionProps: AccordionItemProps,
 ) => {
 	const [active, setActive] = useState<true | false>(false)
-	const contentEl = useRef()
+	const contentEl = useRef<HTMLDivElement>(null)
 	return (
 		<div className='accordion-item'>
 			<button
