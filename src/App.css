@@ -24,11 +24,18 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	font-size: 20px;
 	padding: 20px;
 	text-align: left;
 	outline: none;
 	transition: background-color 0.4s ease-in-out;
+}
+
+.btn-accordion .icon {
+	font-size: 20px;
+}
+
+.accordion-title {
+	font-size: 20px;
 }
 
 .active,
@@ -38,9 +45,10 @@
 
 .accordion-panel {
 	flex-basis: 100%;
+	font-size: 14px;
 	height: 0px;
 	overflow: hidden;
-	transition: height 0.3s ease-in-out;
+	transition: height 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 .accordion-panel.active {
 	height: 250px;
